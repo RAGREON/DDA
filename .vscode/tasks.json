@@ -1,0 +1,30 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+      {
+          "type": "shell",
+          "label": "g++.exe build active file",
+          "command": "/c/MinGW/bin/g++.exe",
+          "args": [
+              "-g",
+              "${fileDirname}/*.cpp",
+              "-o",
+              "${fileDirname}/${fileBasenameNoExtension}.exe",
+              "-I/c/SDL2/include",   // Add the SDL2 include path
+              "-L/c/SDL2/lib",       // Add the SDL2 library path
+              "-lmingw32",
+              "-lSDL2main",
+              "-lSDL2",
+              "-lSDL2_image"
+          ],
+          "group": {
+              "kind": "build",
+              "isDefault": true
+          },
+          "options": {
+              "cwd": "/c/MinGW/bin"
+          },
+          "problemMatcher": ["$gcc"]
+      }
+  ]
+}

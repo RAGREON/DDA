@@ -1,0 +1,1 @@
+g++ src/main.cpp -o main.exe -I/c/SDL2/include -L/c/SDL2/lib -lmingw32 -lSDL2main -lSDL2
